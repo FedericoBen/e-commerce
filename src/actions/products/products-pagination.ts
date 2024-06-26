@@ -39,7 +39,11 @@ export const getPaginatedProductsWithImages = async ({
       })),
     };
   } catch (error) {
-    throw new Error("Error load products");
+    return {
+      currentPage: page,
+      totalPages: 1,
+      products: [],
+    };
   }
 };
 
@@ -87,6 +91,10 @@ export const getPaginatedProductsWithImagesGender = async ({
       })),
     };
   } catch (error) {
-    throw new Error("Error load products");
+    return {
+      currentPage: page,
+      totalPages: 1,
+      products: [],
+    };
   }
 };

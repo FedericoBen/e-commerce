@@ -38,20 +38,20 @@ async function main() {
     };
   });
 
-  productsMap.forEach(async (product) => {
-    const { images, ...productToSave } = product;
+  // productsMap.forEach(async (product) => {
+  //   const { images, ...productToSave } = product;
 
-    const savedProduct = await prisma.product.create({
-      data: { ...productToSave },
-    });
+  //   const savedProduct = await prisma.product.create({
+  //     data: { ...productToSave },
+  //   });
 
-    const imageData = images.map((img) => ({
-      url: img,
-      productId: savedProduct.id,
-    }));
+  //   const imageData = images.map((img) => ({
+  //     url: img,
+  //     productId: savedProduct.id,
+  //   }));
 
-    await prisma.productImage.createMany({ data: imageData });
-  });
+  //   await prisma.productImage.createMany({ data: imageData });
+  // });
 
   await prisma.country.createMany({ data: countries });
 

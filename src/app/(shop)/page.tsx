@@ -20,7 +20,7 @@ export default async function Home({ searchParams: { page } }: HomeProps) {
       page: page ? parseInt(page) : 1,
     });
 
-  if (products.length == 0) redirect(ROUTES.ROOT);
+  // if (products.length == 0) redirect(ROUTES.ROOT);
 
   return (
     <>

@@ -28,7 +28,7 @@ export default async function CategoryPage({
     gender,
   });
 
-  if (products.length == 0) redirect(`${ROUTES.CATEGORY}/${gender}`);
+  // if (products.length == 0) redirect(`${ROUTES.CATEGORY}/${gender}`);
 
   return (
     <>
