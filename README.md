@@ -1,4 +1,6 @@
 # E-commerce Application in Next.js
+## Url( https://e-commerce-fb.vercel.app/ )
+![Descripción de la imagen](/public/imgs/e-commerce-view.jpg)
 
 ## Description
 
