@@ -1,0 +1,22 @@
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 12px;
+  background-color: #4d869c;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &:active {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+    cursor: default;
+  }
+}

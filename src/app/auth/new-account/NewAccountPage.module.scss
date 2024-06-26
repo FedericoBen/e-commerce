@@ -1,0 +1,30 @@
+.container_page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+    & .divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      font-size: 12px;
+  
+      & .line {
+        width: 100%;
+        max-width: 100px;
+        height: 1px;
+        background-color: #848383;
+      }
+    }
+
+    & .link:hover {
+      color: rgb(78, 190, 227);
+      text-decoration: underline;
+    }
+  }

@@ -1,0 +1,33 @@
+.alert_message {
+    top: 200px;
+    right: 100px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-radius: 4px;
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: opacity, z-index 1s ease;
+  
+    & * {
+      color: #ffffff;
+    }
+    & .container_message {
+      width: 100%;
+      min-height: 100%;
+    }
+  
+    & .container_icon_close {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      margin-bottom: auto;
+    }
+  }
+  

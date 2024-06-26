@@ -1,0 +1,28 @@
+.container_page{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & .message_empty{
+        display: flex;
+        flex-direction: column;
+
+        & h2{
+            cursor: default;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        & .go_back{
+            font-size: 32px;
+            color: rgb(78, 190, 227);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

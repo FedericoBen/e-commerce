@@ -1,0 +1,58 @@
+.table_products {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  overflow-x: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  & .header_table {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    
+    width: 1000px;
+
+    & th {
+      display: flex;
+      justify-content: flex-start;
+      flex-basis: 100px;
+      font-weight: bold;
+    }
+  }
+  & .row_table {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    
+    border-bottom: 1px solid #cfcfcf;
+    background-color: #ffffff;
+    width: 1000px;
+
+    &:hover {
+      background-color: #e9f8fe;
+      & * {
+        font-weight: 700;
+      }
+    }
+
+    & td {
+      display: flex;
+      align-items: center;
+      flex-basis: 100px;
+      word-break: break-all;
+      padding-right: 16px;
+      font-size: 16px;
+      cursor: default;
+
+      & .link {
+        color: #688eff;
+        font-weight: 900;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

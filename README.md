@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-commerce Application in Next.js
 
-## Getting Started
+## Description
 
-First, run the development server:
+This e-commerce application, developed in Next.js, offers an intuitive and efficient online shopping experience. Its notable features include:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. **PayPal Payments**: Users can make secure and convenient payments using PayPal.
+2. **Admin Section**: A robust admin section allows efficient management of products, orders, and users.
+3. **Server Actions**: Utilizes Server Actions for service management, ensuring optimal performance and a scalable architecture.
+4. **PostgreSQL Database**: Implemented with PostgreSQL, a relational database that guarantees data integrity and security.
+5. **Prisma ORM**: Prisma manages all database resources, facilitating data interaction and simplifying development.
+6. **SEO Optimization**: Leverages Next.js capabilities for SEO management, ensuring the website is easily found and well-positioned in search engines, increasing visibility and attracting more potential customers.
+
+This application is ideal for businesses seeking a modern, secure, and easy-to-manage e-commerce solution with a strong online presence thanks to its optimized SEO management.
+
+## To run in dev
+
+1. Clone de repository
+2. Copy the .env.template file and rename to .env and modify variable environment
+   - 2.1 Generate a secret key an replace, look the instruction in the .env file
+3. Install dependencies
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Up the data base
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+docker compose up -d
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Run the migration of Prisma
 
-## Learn More
+```
+npx prisma migrate dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Execute seed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run seed
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+7. Clear de local storage of browser
+8. Run the project
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run dev
+```

@@ -1,24 +1,39 @@
 {
-  "name": "ecommerce",
+  "name": "e-commerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "ts-node src/seed/seed-database.ts"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.5.0",
+    "@prisma/client": "^5.15.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.2.0",
+    "next": "14.2.3",
+    "next-auth": "^5.0.0-beta.19",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-hook-form": "^7.52.0",
+    "react-icons": "^5.2.1",
+    "sass": "^1.77.4",
+    "swiper": "^11.1.4",
+    "zod": "^3.23.8",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "prisma": "^5.15.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   }
 }

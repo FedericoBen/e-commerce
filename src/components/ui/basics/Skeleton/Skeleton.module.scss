@@ -1,0 +1,18 @@
+.skeleton {
+    height: 32px;
+    width: 100%;
+    background-color: #e1dfdf;
+    animation: throb linear 3s infinite;
+  }
+  
+  @keyframes throb {
+    0% {
+      background-color: #d7d7d7;
+    }
+    50% {
+      background-color: #c4c4c4;
+    }
+    100% {
+      background-color: #d7d7d7;
+    }
+  }

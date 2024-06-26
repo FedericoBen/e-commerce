@@ -1,0 +1,14 @@
+.container_grid {
+  gap: 32px;
+  padding: 12px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}

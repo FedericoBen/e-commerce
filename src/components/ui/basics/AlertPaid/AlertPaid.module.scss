@@ -1,0 +1,18 @@
+.alert_paid {
+  margin-block: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: green;
+    color: #ffffff;
+    & *{
+      color: #ffffff;
+
+    }
+  }
+
+  .alert_no_paid{
+    background-color: red !important;
+  }

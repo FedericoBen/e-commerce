@@ -1,0 +1,49 @@
+.label {
+  font-weight: bold;
+}
+
+.container_input {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  background-color: #cedef0;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 7px;
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+
+  &:hover {
+    border: 1px solid #9bbde3;
+  }
+
+  &:focus {
+    border: 2px solid #9bbde3;
+  }
+}
+
+.error {
+  & .label {
+    color: red;
+  }
+  & .input {
+    background-color: #f0cece;
+    &:hover {
+      border: 1px solid red;
+    }
+
+    &:focus {
+      border: 2px solid red;
+    }
+  }
+}
+
+.alert_input {
+  color: red;
+}

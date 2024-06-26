@@ -1,0 +1,27 @@
+.container_footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 200px;
+  padding: 80px 20px 0 20px;
+  column-gap: 40px;
+
+  & .e_commerce {
+    font-weight: bold;
+  }
+
+  & .link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    height: max-content;
+    &:hover {
+      & * {
+        color: rgb(78, 190, 227);
+        text-decoration: underline;
+      }
+    }
+  }
+}

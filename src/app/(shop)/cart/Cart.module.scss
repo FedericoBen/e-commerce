@@ -1,0 +1,33 @@
+.container_page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  & .container_cart_shop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+
+    & .container_cart_summary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+      padding: 20px;
+
+      & .cart {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & .title > * {
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
