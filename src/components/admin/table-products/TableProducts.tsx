@@ -21,8 +21,6 @@ const TableProducts = ({ products }: TableProductsProps) => {
           <th>Sizes</th>
         </tr>
         {products.map((product) => {
-          console.log(product.images[0]);
-
           return (
             <tr key={product.id} className={styles.row_table}>
               <td>

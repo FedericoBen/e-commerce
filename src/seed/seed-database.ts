@@ -13,7 +13,7 @@ async function main() {
   await prisma.product.deleteMany();
   await prisma.category.deleteMany();
 
-  const { categories, products, users } = initialData;
+  const { categories, users } = initialData;
 
   await prisma.user.createMany({
     data: users,
@@ -25,18 +25,20 @@ async function main() {
     })),
   });
 
-  const categoriesDB = await prisma.category.findMany();
+  await prisma.country.createMany({ data: countries });
 
-  const productsMap = products.map((product) => {
-    const { type, ...productRest } = product;
-    const categoryId =
-      categoriesDB.find((cat) => cat.name.toLowerCase() == type.toLowerCase())
-        ?.id || "not-specified";
-    return {
-      ...productRest,
-      categoryId,
-    };
-  });
+  // const categoriesDB = await prisma.category.findMany();
+
+  // const productsMap = products.map((product) => {
+  //   const { type, ...productRest } = product;
+  //   const categoryId =
+  //     categoriesDB.find((cat) => cat.name.toLowerCase() == type.toLowerCase())
+  //       ?.id || "not-specified";
+  //   return {
+  //     ...productRest,
+  //     categoryId,
+  //   };
+  // });
 
   // productsMap.forEach(async (product) => {
   //   const { images, ...productToSave } = product;
@@ -53,7 +55,6 @@ async function main() {
   //   await prisma.productImage.createMany({ data: imageData });
   // });
 
-  await prisma.country.createMany({ data: countries });
 
   console.log("Seed executed success");
 }

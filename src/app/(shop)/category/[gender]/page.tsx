@@ -28,13 +28,11 @@ export default async function CategoryPage({
     gender,
   });
 
-  // if (products.length == 0) redirect(`${ROUTES.CATEGORY}/${gender}`);
-
   return (
     <>
       <Title title={`${gender}'s articles`} subtitle={`All products`} />
       <ProductsGrid products={products} />
-      <Pagination totalPages={totalPages} />
+      {products.length > 0 && <Pagination totalPages={totalPages} />}
     </>
   );
 }

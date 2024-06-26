@@ -22,8 +22,6 @@ export default async function AdminProductsPage({
     page: page ? parseInt(page) : 1,
   });
 
-  if (products.length == 0) redirect(ROUTES.ROOT);
-
   return (
     <div className={styles.container_page}>
       <div className={styles.container_components}>
@@ -37,7 +35,7 @@ export default async function AdminProductsPage({
           </Link>
         </div>
         <TableProducts products={products} />
-        <Pagination totalPages={totalPages} />
+        {products.length > 0 && <Pagination totalPages={totalPages} />}
       </div>
     </div>
   );
