@@ -23,7 +23,9 @@ const ProductGridItem = ({ product }: ProductGridItemProps) => {
         alt={product.title}
         width={500}
         height={500}
-        onMouseEnter={() => setDisplayImage(product.images?.[1])}
+        onMouseEnter={() =>
+          setDisplayImage(product.images?.[1] ?? product.images?.[0])
+        }
         onMouseLeave={() => setDisplayImage(product.images?.[0])}
       />
       <div className={styles.container_info}>
