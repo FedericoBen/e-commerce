@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:local": "next build",
     "build": "npm run prisma:generate && npm run prisma:deploy && next build",
     "start": "next start",
     "lint": "next lint",

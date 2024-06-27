@@ -1,4 +1,3 @@
-
 export interface Product {
   id?: string;
   description: string;
@@ -11,6 +10,7 @@ export interface Product {
   title: string;
   // type: ValidType;
   gender: ValidCategory;
+  ProductImage?: ProductImage[];
 }
 
 export interface CartProduct {

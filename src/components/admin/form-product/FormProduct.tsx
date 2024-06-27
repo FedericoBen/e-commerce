@@ -17,7 +17,6 @@ import { useRouter } from "next/navigation";
 import { ROUTES } from "@/common/routes";
 import { useState } from "react";
 import { deleteImage } from "@/actions/products/delete-product-image";
-import { IoCloseOutline } from "react-icons/io5";
 import { useAlertMessage } from "@/providers/alert-message-provider/AlertMessageProvider";
 
 interface FormProduct {
@@ -108,6 +107,13 @@ const FormProduct = ({ categories, product }: FormProduct) => {
     await deleteImage(imageId, imageUrl);
     setLoading(false);
   };
+
+  // const imagesToShow = useMemo(() => {
+  //   const imagesWithoutRepeating = new Set([
+  //     ...(product?.ProductImage ?? []),
+  //     ...(getValues().images ?? []),
+  //   ]);
+  // }, [getValues, product?.ProductImage]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form_product}>

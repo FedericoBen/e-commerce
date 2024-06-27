@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 20px;
-    
+
     width: 1000px;
 
     & th {
@@ -24,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 20px;
-    
+
     border-bottom: 1px solid #cfcfcf;
     background-color: #ffffff;
     width: 1000px;
@@ -55,4 +55,10 @@
       }
     }
   }
+}
+
+.button_delete {
+  display: flex !important;
+  align-items: center !important;
+  background-color: transparent !important;
 }
