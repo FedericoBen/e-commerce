@@ -5,5 +5,5 @@ export interface User {
   emailVerified?: Date | null;
   password: string;
   role: string;
-  image: string;
+  image?: string;
 }

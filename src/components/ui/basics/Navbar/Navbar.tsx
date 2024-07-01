@@ -18,7 +18,7 @@ const Navbar = () => {
       <div>
         <Link href={ROUTES.ROOT}>
           <span className={`${titleFont.className} ${styles.title}`}>
-            E-COMMERS
+            E-COMMERCE
           </span>
           <span> | Shop</span>
         </Link>

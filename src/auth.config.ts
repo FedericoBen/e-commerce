@@ -12,11 +12,15 @@ export const authConfig: NextAuthConfig = {
   },
 
   callbacks: {
-    jwt({ token, user }) {
+    async jwt(tokeIn) {
+      const { token, user } = tokeIn;
+
       if (user) token.data = user;
       return token;
     },
-    session({ session, token, user }) {
+    async session(sessionIn) {
+      const { session, token, user } = sessionIn;
+
       session.user = token.data as any;
       return session;
     },
@@ -40,8 +44,6 @@ export const authConfig: NextAuthConfig = {
         if (!user) return null;
         if (!bcryptjs.compareSync(password, user.password)) return null;
         const { password: _, ...rest } = user;
-        console.log(rest);
-
         return rest;
       },
     }),

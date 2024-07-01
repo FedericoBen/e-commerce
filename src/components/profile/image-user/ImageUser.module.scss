@@ -1,0 +1,74 @@
+.container_image_user {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  margin-inline: auto;
+
+  & .container_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  & img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+
+  & .container_icon_edit_image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 4px;
+    top: 80%;
+    right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-inline: auto;
+  }
+}
+
+.container_modal {
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 201;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+
+  & .back_ground_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  & .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    z-index: 3;
+  }
+}

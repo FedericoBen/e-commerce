@@ -30,3 +30,16 @@ export const login = async (email: string, password: string) => {
     };
   }
 };
+
+export const refreshSession = async (email: string, password: string) => {
+  try {
+    await signIn("credentials", { email, password, redirect: false });
+    return { ok: true, message: "Well come" };
+  } catch (error) {
+    console.log(error);
+    return {
+      ok: false,
+      message: `Can't log in`,
+    };
+  }
+};
