@@ -17,7 +17,7 @@ const NotFound = () => {
         </h2>
       </div>
       <ProductImage
-        src="/imgs/starman_750x750.png"
+        src="/static/starman_750x750"
         alt="Starman"
         width={550}
         height={550}

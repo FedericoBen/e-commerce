@@ -75,7 +75,7 @@ const ImageUser = ({ image }: ImageUserProps) => {
               <div className={styles.container_image}>
                 <Image
                   src={
-                    (imagToShow as string) ?? image ?? "/imgs/user_default.jpg"
+                    (imagToShow as string) ?? image ?? "/static/user_default.jpg"
                   }
                   alt="images of user"
                   height={200}
@@ -102,7 +102,7 @@ const ImageUser = ({ image }: ImageUserProps) => {
       >
         <div className={styles.container_image}>
           <Image
-            src={image ?? "/imgs/user_default.jpg"}
+            src={image ?? "/static/user_default.jpg"}
             alt="images of user"
             height={200}
             width={200}
