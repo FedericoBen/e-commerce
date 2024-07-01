@@ -7,6 +7,7 @@ import { CiEdit } from "react-icons/ci";
 import { updateImageUser } from "@/actions/users/update-image-user";
 import { useSession } from "next-auth/react";
 import { ROUTES } from "@/common/routes";
+import { deleteImageUser } from "@/actions/users/delete-image-user";
 
 interface ImageUserProps {
   image: string | null | undefined;
@@ -18,7 +19,6 @@ interface ImagesState {
 }
 
 const ImageUser = ({ image }: ImageUserProps) => {
-  const { update } = useSession();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -47,9 +47,16 @@ const ImageUser = ({ image }: ImageUserProps) => {
   const handlerUploadAvatar = async () => {
     setLoading(true);
     const resp = await updateImageUser(imageToLoad!);
-    if (!resp?.user) return;
-    await update({ user: resp.user, token: resp.user });
     setLoading(false);
+    if (!resp?.user) return;
+    window.location.reload();
+  };
+
+  const handlerDeleteAvatar = async () => {
+    setLoading(true);
+    const resp = await deleteImageUser();
+    setLoading(false);
+    if (!resp?.ok) return;
     window.location.reload();
   };
 
@@ -92,6 +99,9 @@ const ImageUser = ({ image }: ImageUserProps) => {
               onClick={handlerUploadAvatar}
             >
               upload
+            </Button>
+            <Button disabled={!image} onClick={handlerDeleteAvatar}>
+              delete
             </Button>
           </div>
         </div>

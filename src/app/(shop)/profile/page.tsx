@@ -19,9 +19,7 @@ export default async function ProfilePage() {
     where: { id: session.user.id },
   });
 
-  const { name, email, image } = session?.user;
-
-  // console.log(session?.user);
+  const { name, email } = session?.user;
 
   return (
     <div className={styles.container_page}>

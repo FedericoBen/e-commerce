@@ -9,9 +9,7 @@ export default async function ShopLayout({
   children: React.ReactNode;
 }) {
   const session = await auth();
-
-  console.log({ session });
-
+  
   if (session?.user) redirect(ROUTES.ROOT);
 
   return <main className={styles.container_auth_layout}>{children}</main>;
