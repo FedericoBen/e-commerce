@@ -95,9 +95,9 @@ export default async function OrderPage({ params: { id } }: OrderPageProps) {
               </div>
             </div>
             <AlertPaid paid={isPaid} />
-            {!isPaid && session.user.role != "admin" && (
+            {/* {!isPaid && session.user.role != "admin" && (
               <PayPalButton amount={order.total} orderId={order.id} />
-            )}
+            )} */}
           </div>
         </div>
       </div>
